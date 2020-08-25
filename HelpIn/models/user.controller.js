@@ -36,3 +36,15 @@ exports.findAll = (req, res) => {
       .send({detail : "users not found"});
      });
 };
+
+
+exports.deleteUser = (req, res) => {
+  users.deleteByUsername(req.params.userId).then((result) => {
+    if(result)
+      res.status(200).send({detail : "user removed"});
+    else
+      res
+      .status(400)
+      .send({detail : "user not found"});
+     });
+};

@@ -37,3 +37,9 @@ exports.findAllUsers = async () => {
   var usuario = await User.findAll();
     return usuario;
 };
+
+exports.deleteByUsername = async (id) => {
+  var usuario = await User.findOne({where: { username: id} });
+  await usuario.destroy();
+  return true;
+};

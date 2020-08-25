@@ -14,5 +14,8 @@ router.get('/users/:userId', [
 router.post('/users', [
    usersController.insert
 ]);
+router.delete('/users/:userId', [
+    usersController.deleteUser
+ ]);
 
 module.exports = router;
