@@ -32,10 +32,10 @@ services:
         ports:
             - "3000:3000"
         volumes:
-            - ${app}/client:/app
+            - ${app}/app/client
     django:
         build:
-            context: ${PREFIX}/app
+            context: ${app}/sgdproject
             dockerfile: Dockerfile
         container_name: container-django
 
@@ -43,7 +43,7 @@ services:
             - "8000:8000"
 
         volumes:
-            - ${app}/app:/app
+            - ${app}/app
         depends_on:
             - mysql
 
