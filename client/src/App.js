@@ -62,6 +62,7 @@ class App extends React.Component {
 
   render() {
     const { redirect, user } = this.state;
+    console.log(`${process.env.MESSAGE}`);
     //console.log(user);
     return (
       <>
