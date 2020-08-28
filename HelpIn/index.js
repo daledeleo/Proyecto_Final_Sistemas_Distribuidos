@@ -1,10 +1,14 @@
 const express  = require('express');
 const routesUser = require('./routes/user.routes');
 const bodyParser = require('body-parser');
-
-var app = express();
+const redis = require("redis");
+const axios = require("axios");
 
 var port  = process.env.PORT || 8080;
+
+// express server
+var app = express();
+
 
 app.use(bodyParser.json());
 app.use(routesUser);

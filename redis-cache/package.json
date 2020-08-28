@@ -1,0 +1,29 @@
+{
+  "name": "redis-connector-server",
+  "version": "1.0.0",
+  "description": "Conecta el servidor de users con el servidor de Redis para el cacheo",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daledeleo/Proyecto_Final_Sistemas_Distribuidos.git"
+  },
+  "author": "P8",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daledeleo/Proyecto_Final_Sistemas_Distribuidos/issues"
+  },
+  "homepage": "https://github.com/daledeleo/Proyecto_Final_Sistemas_Distribuidos#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "loadtest": "^5.0.4",
+    "nodemon": "^2.0.4"
+  }
+}
